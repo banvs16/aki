@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satu Kisah, Tiga Babak ✨</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.21/fullpage.min.css" />
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="Sempurna - Andra And The Backbone (instrumental) - weblamethemoon - SoundLoadMate.com.mp3" type="audio/mp3">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <div id="fullpage">
+        
+        <div class="section active" data-anchor="opening">
+            <div class="content intro-page">
+                <p class="pre-title">Untuk kamu sayang</p>
+                
+                <h1>Hai sayang, ini sedikit bujukan dari aku :D</h1> 
+                
+                <p class="subtitle">Ini foto-foto kenangan kita isinya sayang.</p>
+                
+                <button onclick="fullpage_api.moveSectionDown();" class="main-button">
+                    Look
+                </button>
+                
+                <p class="counter-text">Kita sudah bersama selama: <span id="days-together">Menghitung...</span></p>
+            </div>
+        </div>
+        
+        <div class="section" data-anchor="pesan-dia">
+            <div class="content interactive-page">
+                <h2>Curahan Hati Untukku</h2>
+                <p class="question-text">
+                    Jawablah semua ini dengan jujur. Setelah selesai, kirimkan jawabannya ke aku.
+                </p>
+                
+                <form name="CurhatanPasangan" method="POST" data-netlify="true" class="questions-form-container">
+                    <input type="hidden" name="form-name" value="CurhatanPasangan" />
+                    
+                    <div class="questions-container">
+                        <label for="q1">1. Yang lagi kamu rasa kalau lagi sama aku apa sayang?</label>
+                        <textarea id="q1" name="Jawaban_1" rows="2" placeholder="Tulis di sini..." required></textarea>
+                        
+                        <label for="q2">2. Apa hal yang kamu nanti nanti selama ini sayang dalam hubungan ini?</label>
+                        <textarea id="q2" name="Jawaban_2" rows="2" placeholder="Tulis di sini..." required></textarea>
+                        
+                        <label for="q3">3. Perlakuan aku yang menurut kamu berkesan untuk kamu apa sayang?</label>
+                        <textarea id="q3" name="Jawaban_3" rows="2" placeholder="Tulis di sini..." required></textarea>
+                        
+                        <label for="q4">4. Kenangan yang paling kamu inget itu apa dan seberapa kamu suka?</label>
+                        <textarea id="q4" name="Jawaban_4" rows="2" placeholder="Tulis di sini..." required></textarea>
+
+                        <label for="q5">5. Satu hal yang pengen kamu bilang ke aku, tapi belum terucap apa sayang?</label>
+                        <textarea id="q5" name="Jawaban_5" rows="2" placeholder="Tulis di sini..." required></textarea>
+                    </div>
+                    
+                    <p class="small-note">Jawaban ini akan dikirimkan ke email aku. (Klik "Kirim" hanya setelah semua terisi).</p>
+                    
+                    <button type="submit" class="send-answer-button">
+                        Kirim Jawabanku ke Kamu Sekarang!
+                    </button>
+                </form>
+
+                <button onclick="fullpage_api.moveSectionDown();" class="next-section-button-secondary">
+                    Lanjut ke Album Foto
+                </button>
+            </div>
+        </div>
+
+
+        <div class="section" data-anchor="galeri-foto">
+            
+            <div class="slide" data-anchor="foto-1">
+                <div class="slide-content">
+                    <div class="photo-frame">
+                        <img src="images/image1.jpeg" alt="Momen 1" class="main-photo" onclick="openModal('images/image1.jpeg', 'Ini Awal Kita Jadian');">
+                    </div>
+                    <div class="caption">
+                        <h2>Ini Awal Kita Jadian</h2>
+                        <p>Disini awalmula kita sayang, dimana aku nembak kamu dan nemenin kamu konser. Masih fresh banget hubungan kita sayang hohoho</p>
+                        <span class="date">17.05.2024</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide" data-anchor="foto-2">
+                <div class="slide-content">
+                    <div class="photo-frame">
+                        <img src="images/image2.jpeg" alt="Momen 2" class="main-photo" onclick="openModal('images/image2.jpeg', 'Bunga Untuk Kamu');">
+                    </div>
+                    <div class="caption">
+                        <h2>Bunga Untuk Kamu</h2>
+                        <p>Ini temen aku sayang yang aku kasih kekamu hohoho, lucu yaaa temen aku?</p>
+                        <span class="date">27.10.2024</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide" data-anchor="foto-3">
+                <div class="slide-content">
+                    <div class="photo-frame">
+                        <img src="images/image3.jpeg" alt="Momen 3" class="main-photo" onclick="openModal('images/image3.jpeg', 'Photobooth Kita');">
+                    </div>
+                    <div class="caption">
+                        <h2>Photobooth Kita</h2>
+                        <p>Muka kita masi bahagia banget ya disini? Kangen deh aku momen ini sayang.</p>
+                        <span class="date">28.12.2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" data-anchor="foto-4">
+                <div class="slide-content">
+                    <div class="photo-frame">
+                        <img src="images/image4.jpeg" alt="Momen 4" class="main-photo" onclick="openModal('images/image4.jpeg', 'Perjanjian untuk selalu bersama');">
+                    </div>
+                    <div class="caption">
+                        <h2>Perjanjian untuk selalu bersama</h2>
+                        <p>Janji yang kita buat sama-sama disini sayang, aku sudah sangat yakin sama kamu sayang hehe, makanya aku berani untuk iket kamuu.</p>
+                        <span class="date">17.05.2025</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide" data-anchor="foto-5-akhir">
+                <div class="slide-content">
+                    <div class="photo-frame">
+                        <img src="images/image5.jpeg" alt="Momen 5" class="main-photo" onclick="openModal('images/image5.jpeg', 'Terakhir Kita Ketemu');">
+                    </div>
+                    <div class="caption final-slide-caption">
+                        <h2>Terakhir Kita Ketemu</h2>
+                        <p>Disini kita lagi nonton yaa sayang? sayang banget tapi ini foto terakhir kita main dan setelah itu akunya malah sakit huhuhu.</p>
+                        <span class="date">02.10.2025</span>
+                        
+                        <button onclick="fullpage_api.moveSectionDown();" class="next-section-button">
+                            Lanjut ke Pesan Terakhirku
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div> 
+        
+        <div class="section final-message" data-anchor="penutup">
+            <div class="content">
+                <h2>Pesan Dari Aku</h2>
+                
+                <p class="final-text">
+                    "Sayang, ini aku buat dengan setulus hati aku lhoo. Aku disini beneran sangat kangen kamu sayang, dan aku selalu inget kamu apapun kondisinya hehehe, lucu lucu yaa sayang kenangan kita? so aku pengen kita kembali lagi seperti biasanya sayang. Semoga dengan ini kamu bisa memaafkan semua kesalahan yang aku buat ya sayangg? walau ini ndaa seberapa hehehe.
+                    I LOVE YOUU SO MUCH SAYANG"
+                </p>
+                
+                <p class="signature">- Pacar kamu yang paling gantenk</p>
+            </div>
+        </div>
+        
+    </div> 
+    
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-button">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption" class="modal-caption"></div>
+    </div>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.21/fullpage.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

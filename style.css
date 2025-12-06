@@ -1,0 +1,411 @@
+/* --- Global Reset & Font Soft/Elegan --- */
+body {
+    cursor: auto; 
+    font-family: 'Lato', sans-serif;
+    color: #4a4a4a; 
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, .pre-title {
+    font-family: 'Cormorant Garamond', serif; 
+    color: #9c6c73; /* Soft Rose Pink gelap untuk judul */
+}
+
+/* --- SECTION UMUM fullPage.js (MOTIF KERTAS VINTAGE YANG DIJAMIN MUNCUL) --- */
+.section {
+    background-color: #f7f0e8; /* Warna dasar Kertas Gading yang sedikit lebih gelap */
+    color: #4a4a4a;
+    
+    /* SOLUSI STABIL: TEKSTUR KERTAS VINTAGE */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+                      radial-gradient(rgba(0, 0, 0, 0.08) 1px, #f7f0e8 1px);
+    
+    background-size: 12px 12px; 
+    background-position: 0 0, 6px 6px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- INTRO SECTION (Halaman 1) --- */
+.intro-page {
+    background-color: #fcf8f3 !important; /* Halaman intro dibuat sedikit lebih terang */
+    
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                      radial-gradient(rgba(0, 0, 0, 0.1) 1px, #fcf8f3 1px) !important;
+    background-size: 12px 12px !important;
+    background-position: 0 0, 6px 6px !important;
+}
+
+.pre-title {
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #b8868c; 
+}
+
+/* --- ANNIVERSARY COUNTER STYLE --- */
+.counter-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3em;
+    margin-top: 25px;
+    color: #9c6c73; 
+    font-weight: 600;
+}
+/* ----------------------------------- */
+
+/* --- STYLE TOMBOL WAJIB PENCET --- */
+.main-button, .next-section-button {
+    border: 2px solid transparent; 
+    padding: 15px 35px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+.main-button {
+    background-color: #b8868c; 
+    color: #ffffff;
+}
+
+.main-button:hover {
+    background-color: #ffffff;
+    color: #9c6c73;
+    border-color: #9c6c73;
+    transform: translateY(-2px);
+}
+
+.next-section-button {
+    background-color: #a3b899; 
+    color: #ffffff; 
+    padding: 12px 30px;
+    font-size: 1em;
+    margin-top: 25px; 
+}
+
+.next-section-button:hover {
+    background-color: #ffffff;
+    color: #a3b899;
+    border-color: #a3b899;
+}
+
+/* --- STYLE Halaman 2 (FORM INTERAKTIF) --- */
+.interactive-page {
+    padding: 20px;
+}
+
+.questions-form-container {
+    width: 100%;
+    max-width: 550px;
+    text-align: left;
+}
+
+.questions-container {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding: 10px 0;
+}
+
+.questions-container label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #9c6c73; 
+    font-family: 'Lato', sans-serif;
+    font-size: 1.05em;
+}
+
+.questions-container textarea {
+    width: 98%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e0d9d2;
+    border-radius: 4px;
+    font-size: 1em;
+    resize: vertical;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.send-answer-button {
+    background-color: #9c6c73;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-answer-button:hover {
+    background-color: #7b4f53;
+}
+
+
+/* ================================================= */
+/* --- SLIDE CONTENT (GALERI FOTO) --- */
+/* ================================================= */
+
+.slide-content {
+    background-color: transparent; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 5%;
+    gap: 7%;
+}
+
+.photo-frame {
+    width: 100%;
+    padding-bottom: 75%;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); 
+    background-color: #ffffff;
+    border: 15px solid #ffffff; 
+}
+
+.main-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer; 
+}
+
+.caption {
+    padding: 20px;
+    text-align: left;
+}
+
+.caption h2 {
+    font-size: 2.5em;
+    color: #9c6c73; 
+    border-left: 4px solid #a3b899; 
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.caption p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.date {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #a3b899;
+    letter-spacing: 2px;
+}
+
+/* ================================================= */
+/* --- PERBAIKAN ARROW DAN TITIK NAVIGASI fullPage.js --- */
+/* ================================================= */
+
+.fp-controlArrow {
+    width: 50px; 
+    height: 50px; 
+    background-color: #b8868c !important; 
+    opacity: 0.9 !important; 
+    transition: opacity 0.3s, background-color 0.3s;
+    border-radius: 50%; 
+    margin: 0 10px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.fp-controlArrow:hover {
+    opacity: 1 !important; 
+    background-color: #9c6c73 !important; 
+}
+
+.fp-controlArrow.fp-prev {
+    left: 10px;
+    border-width: 10px 15px 10px 0; 
+    border-color: transparent #ffffff transparent transparent; 
+}
+
+.fp-controlArrow.fp-next {
+    right: 10px;
+    border-width: 10px 0 10px 15px; 
+    border-color: transparent transparent transparent #ffffff; 
+}
+
+.fp-slidesNav {
+    left: 50% !important; 
+    transform: translateX(-50%) !important; 
+    bottom: 30px; 
+}
+
+.fp-slidesNav.bottom li a span {
+    background: #b8868c !important; 
+}
+.fp-slidesNav.bottom li a {
+    background: #e6e0d8 !important; 
+}
+
+/* ================================================= */
+/* --- FINAL SECTION (PESAN SUPER MEWAH) --- */
+/* ================================================= */
+.final-message {
+    color: #4a4a4a;
+}
+
+.final-message .content {
+    background-color: #ffffff; 
+    padding: 60px 40px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15); 
+    border: 3px double #b8868c; 
+    max-width: 650px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.final-message h2 {
+    color: #9c6c73;
+    font-size: 3em;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #a3b899; 
+}
+
+.final-text {
+    font-size: 1.4em;
+    line-height: 1.7;
+    max-width: 100%;
+    margin: 30px auto;
+    font-family: 'Cormorant Garamond', serif; 
+    font-style: italic;
+}
+
+.signature {
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: 400;
+    color: #b8868c;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+
+/* ================================================= */
+/* --- STYLE MODAL (POP-UP) GALERI --- */
+/* ================================================= */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 10000; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 800px; 
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.modal-caption {
+    margin: 15px auto;
+    display: block;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    color: #fcf8f3;
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.close-button {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #fcf8f3;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #b8868c;
+}
+
+
+/* ================================================= */
+/* --- PENYESUAIAN RESPONSIF (MOBILE) --- */
+/* ================================================= */
+
+@media (max-width: 900px) {
+    .slide-content {
+        grid-template-columns: 1fr; 
+        padding-top: 50px;
+        padding-bottom: 50px;
+        row-gap: 30px;
+    }
+    
+    .caption {
+        text-align: center;
+    }
+    
+    .final-slide-caption {
+        text-align: center !important;
+    }
+
+    .final-message .content {
+        padding: 40px 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border: 2px solid #b8868c;
+        border-radius: 0;
+    }
+
+    .modal-content {
+        width: 100%;
+        margin-top: 100px;
+    }
+}
